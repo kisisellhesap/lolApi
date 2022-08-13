@@ -21,7 +21,7 @@ window.addEventListener("load",()=> {
 });
 
 const lolApi = async (champName) => {
-    https://na1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=RGAPI-1ea00ec7-2f71-4ff9-8eb7-befbeb811125
+
 
     url = await fetch(`http://ddragon.leagueoflegends.com/cdn/12.14.1/data/en_US/champion/${champName}.json?api_key=RGAPI-1ea00ec7-2f71-4ff9-8eb7-befbeb811125`);
     console.log(url);
