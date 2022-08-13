@@ -1,0 +1,728 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    /* background: #f1f1f1; */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Gabriela', serif;
+}
+
+body {
+    background-color: #0B1419;
+    background-image: url(img/bg.png);
+    background-repeat: no-repeat;
+    background-position: 0 850;
+    background-size: contain;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: all .4s ease;
+}
+
+
+main {
+width: 80%;
+position: relative;
+padding: 2rem;
+padding-top: 0;
+margin: auto;
+}
+
+.error {
+    width:100%;
+    /* background-color: aqua; */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    color: #fff;
+    background-color: rgba(24, 36, 38, 0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    /* transform: translate(0px,-65px); */
+    transition: all .3s ease;
+    margin-top: -65px;
+}
+
+.error-effect {
+    /* transform: translate(0px,0px); */
+    margin-top: 0px;
+}
+
+.fa-exclamation {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 100%;
+    color: #0B1419;
+    background-color: #fff;
+    padding: 1rem;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    background-color: rgba(24, 36, 38, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 5px;
+    justify-content: space-around;
+
+
+}
+
+
+
+.skinn-slider {
+    width: 100%;
+    margin: auto;
+    transition: all .5s ease;
+    height: 600px;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 2rem;
+
+}
+
+.search-control {
+    display: flex;
+    gap: 1rem;
+}
+
+.champ-name {
+    padding: .3rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+.search {
+    padding: .3rem;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.riotlogo {
+    object-fit: cover;
+    width: 20%;
+}
+.slider-controls {
+    width: 70px;
+    height: 100%;
+   
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 11;
+    /* background-color: aqua; */
+
+    
+}
+
+.slider-controls > button {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+    border: none;
+
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+ 
+}
+
+.active {
+    opacity: 1 !important;
+}
+
+.btn-active {
+    background-color: rgba(11, 20, 25, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+
+.slider-image img {
+    position: absolute;
+    top:0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 1s linear;
+    border-radius: 5px;
+}
+
+.slider-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.logo {
+
+    position: absolute;
+    top: 25.5%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+   
+}
+
+.logo img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-header {
+    position: absolute;
+    width: 100%;
+    top: 46.5%;
+    text-align: center;
+    z-index: 111;
+    color: #fff;
+    pointer-events: none;
+}
+
+.slider-header span { 
+    background-color: rgba(11, 20, 25, 0.5);
+    backdrop-filter: blur(10px);
+    content: "";
+    width: 50%;
+    height:auto;
+    display: block;
+    position: absolute;
+    left: 25%;
+    top: -10px;
+    z-index: -1;
+    border-radius: 5px;
+}
+.middle {
+    display: flex;
+    flex-direction: column;
+}
+
+.character-info {
+    width: 88%;
+    border: 10px solid #1A2226;
+    position: relative;
+    display: flex;
+    top: -85;
+    margin: auto;
+    justify-content: center;
+    background-color: rgba(11, 20, 25, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+
+.character-name {
+    background-color: rgba(11, 20, 25, 0.5);
+color: #fff;
+position: absolute;
+top: -35;
+font-size: 50px;
+padding: 0rem 2rem;
+backdrop-filter: blur(10px);
+}
+
+
+.character-roleBlurb {
+    /* background-color: yellow; */
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.character-role, .character-blurb {
+  
+    /* border: 2px solid red; */
+    width: 40%;
+    height: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+   
+}
+
+
+.role-header,.blurb-header {
+background-color: azure;
+    font-size: 30px;
+}
+
+.role-info,.blurb-info {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 34, 38, .5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 5px;
+    color: #fff;
+
+}
+
+
+.role,.difficulty {
+    /* background-color: blueviolet; */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 100%;
+}
+
+
+
+.role > *  ,.difficulty > *  {
+    font-size: 18px;
+}
+.img-role {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 100%;
+}
+
+.img-role img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.img-difficulty {
+    width: 80px;
+    height: 50px;
+    /* background-color: violet; */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: .2rem;
+}
+
+.dif {
+    width: 15px;
+    border-radius: 2px;
+    height: 10px;
+    background-color: rgba(26, 34, 38, .5);
+}
+
+
+.text-info {
+    font-size: 15px;
+    text-align: center;
+    padding: 0rem 2rem;
+}
+
+.hr-long {
+    width: 5px;
+    height: 80%;
+    background-color: rgba(26, 34, 38, .5);
+    backdrop-filter: blur(5px);
+}
+
+.hr-style {
+width: 100%;
+
+position: relative;
+top: -45px;
+display: flex;
+justify-content: center;
+}
+
+.hr-short {
+height: 70px;
+width: 5px;
+background-color: rgba(26, 34, 38, .5);
+backdrop-filter: blur(5px);
+}
+
+
+
+.spells {
+    width: 88%;
+    height: 600px;
+
+    position: relative;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items:center;
+    background-color: rgba(11, 20, 25, 0.5);
+    backdrop-filter: blur(10px);
+  
+    border: 10px solid #1A2226;
+    padding: 1rem;
+}
+
+.spell-container {
+width:400px;
+height:500px;
+
+position: relative;
+}
+
+.spell-container > div { 
+    width: 70px;
+    height: 70px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 100%;
+
+    position: absolute;
+    margin: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    color: #fff;
+}
+
+.spell-container > div > span { 
+
+    text-align: center;
+    background-color: rgba(11, 20, 25, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius:100%;
+    padding: 1.5rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100% ;
+    height: 100% ;
+    left: 0px;
+    top: 0px;
+    transition: all .5s ease;
+} 
+
+.span-effect {
+    left: 45px !important;
+    top: 45px !important;
+    width: 10px !important; 
+    height: 10px !important;
+}
+ 
+.passive {
+    top: 0px;
+    left: 0px;
+}
+
+.q {
+    top:60px;
+    right: 0px;
+    left: 100px;
+}
+
+.w {
+    top: 150px;
+    right: 0px;
+    left: -30px;
+}
+
+.e {
+    top: 260px;
+    left: -20px;
+    right: 0px;
+}
+
+.r {
+    top: 370px;
+    left: 80px;
+    right: 0px;
+}
+.spell-info {
+    width:500px;
+    height:500px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.spell-header {
+    position: absolute;
+    right: -25;
+    writing-mode: vertical-rl;
+text-orientation: upright;
+background-color: rgba(26, 34, 38, .5);
+backdrop-filter: blur(5px);
+color: #fff;
+}
+.videos {
+    width: 100%;
+    height: 300px;
+    background-color: rgba(26, 34, 38, .5);
+    backdrop-filter: blur(5px);
+    position: relative;
+    border-radius: 5px;
+}
+
+.videos video {
+width: 100%;
+height: 100%;
+transition: all .5s ease;
+position: absolute;
+border-radius: 5px;
+object-fit: fill;
+}
+
+.video-effect {
+    z-index: 1 !important;
+}
+
+.spell-expo {
+    width: 100%;
+    height:auto;
+    background-color: rgba(26, 34, 38, .5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 1rem;
+    color: #fff;
+   
+}
+
+.spell-name-header {
+    width: 100%;
+    background-color: rgba(26, 34, 38, .5);
+    backdrop-filter: blur(5px);
+    padding: .3rem .5rem;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.spell-expo p {
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    font-size: 13px;
+  
+    text-align: justify;
+    border-radius: 5px;
+ 
+}
+
+
+.spell-disabled{
+    pointer-events: none;
+    user-select: none;
+}
+
+@media screen and (max-width:900px) {
+
+    .champ-name , .search ,.error{
+        font-size: 13px;
+    }
+
+    .skinn-slider {
+        background-color: aqua;
+        height: 80%;
+    }
+
+
+    .character-info {
+        height: auto;
+  
+    }
+
+    .error{
+        margin-top: -92px;
+    }
+    .error-effect {
+        margin-top: -32px;
+    }
+
+    main {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    .slider-controls {
+        width: 100%;
+        height: 70px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .slider-controls button {
+        width: 17px;
+        height: 17px;
+    }
+
+
+    .character-roleBlurb {
+        /* background-color: yellow; */
+        /* width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+     */
+     flex-direction: column;
+    }
+
+    .character-role, .character-blurb {
+  
+        /* border: 2px solid red; */
+        /* width: 40%;
+        height: 60%;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        */
+        width: 80%;
+
+        height: auto;
+    }
+
+    .spells {
+        flex-direction: column;
+        height: auto;
+        gap: 2.2rem;
+        padding: 0;
+   
+        
+    }
+    .spell-container {
+        height: 400px;
+        width: 200px;
+ 
+      
+    }
+    .spell-container > div {
+
+     width: 50px;
+     height: 50px;
+     
+    }
+    .spell-container > div > span {
+      
+     
+    }
+
+    .passive {
+        top: 0px;
+        left: 0px;
+    }
+    
+    .span-effect {
+        left: 37px !important;
+        top: 37px !important;
+        width: 10px !important; 
+        height: 10px !important;
+    }
+
+    .spell-info{
+    width: auto;
+    justify-content:flex-start;
+    align-items: flex-start;    
+    }
+
+
+    .slider-header {
+        font-size: 1.3rem;
+    }
+    
+}
+
+@media screen and (max-width:500px) {
+    
+    .champ-name , .search ,.error{
+        font-size: 12px;
+    }
+    main {
+        padding: 0px;
+        width: 98%;
+    }
+    .error{
+        margin-top: -60px;
+        padding: .4rem;
+    }
+    .error-effect {
+        margin-top: 0px;
+    }
+
+    .slider-controls {
+        width: 100%;
+        height: 70px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .slider-controls button {
+        width: 15px;
+        height: 15px;
+    }
+
+}
