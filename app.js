@@ -23,10 +23,11 @@ window.addEventListener("load",()=> {
 const lolApi = async (champName) => {
 
 
-    url = await fetch(`http://ddragon.leagueoflegends.com/cdn/12.14.1/data/en_US/champion/${champName}.json?api_key=RGAPI-1ea00ec7-2f71-4ff9-8eb7-befbeb811125`);
+    url = await fetch(`http://ddragon.leagueoflegends.com/cdn/12.14.1/data/en_US/champion/${champName}.json`);
+
     console.log(url);
     // console.log(url.ok);
-   
+
     if(url.ok===true) {
           
             const data = await url.json();
