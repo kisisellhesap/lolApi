@@ -23,7 +23,7 @@ window.addEventListener("load",()=> {
 const lolApi = async (champName) => {
 
 
-    url = await fetch(`http://ddragon.leagueoflegends.com/cdn/12.14.1/data/en_US/champion/${champName}.json`);
+    url = await fetch(`https://ddragon.leagueoflegends.com/cdn/12.14.1/data/en_US/champion/${champName}.json`);
 
     console.log(url);
     // console.log(url.ok);
@@ -93,7 +93,7 @@ setTimeout(() => {
         let imageUrl = champName+"_"+newData.skins[i].num;
         // console.log(imageUrl);
         sliderImage.innerHTML+=  `
-        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${imageUrl}.jpg" id="${i}">
+        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${imageUrl}.jpg" id="${i}">
         `;
     sliderImage.children[0].classList.add("active");
     sliderControl.children[0].classList.add("btn-active");
@@ -111,7 +111,7 @@ setTimeout(() => {
         btn.addEventListener("click", () => {
             console.log(newData.skins[btn.id].name);
             let changeUrl = champName+"_"+ newData.skins[btn.id].num;
-            let bgUrl = `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${changeUrl}.jpg`;
+            let bgUrl = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${changeUrl}.jpg`;
             // console.log(bgUrl);
             // console.log(btn.id);
             index=btn.id;
